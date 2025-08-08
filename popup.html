@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Summarizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Summarizer</h1>
+        <div class="api-key-section">
+            <label for="apiKey">Gemini API Key:</label>
+            <input type="password" id="apiKey" placeholder="Enter your Gemini API Key">
+            <button id="saveApiKey" class="button">Save Key</button>
+        </div>
+        <div class="main-actions">
+            <button id="summarizeBtn" class="button primary">Summarize Video</button>
+            <div id="loadingIndicator" class="loading-spinner hidden"></div>
+        </div>
+        <div class="summary-section">
+            <label for="transcriptInput">Video Transcript (or paste here):</label>
+            <textarea id="transcriptInput" placeholder="Transcript will appear here, or you can paste it manually if auto-detection fails." rows="10"></textarea>
+            <div class="summary-output">
+                <h2>Summary:</h2>
+                <p id="summaryOutput">Click 'Summarize Video' to get a beginner-friendly summary.</p>
+            </div>
+        </div>
+        <div id="messageBox" class="message-box hidden"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
